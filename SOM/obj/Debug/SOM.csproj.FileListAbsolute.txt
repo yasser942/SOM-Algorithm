@@ -1,0 +1,10 @@
+C:\Users\kingn\RiderProjects\SOM\SOM\bin\Debug\SOM.exe.config
+C:\Users\kingn\RiderProjects\SOM\SOM\bin\Debug\SOM.exe
+C:\Users\kingn\RiderProjects\SOM\SOM\bin\Debug\SOM.pdb
+C:\Users\kingn\RiderProjects\SOM\SOM\obj\Debug\SOM.csproj.AssemblyReference.cache
+C:\Users\kingn\RiderProjects\SOM\SOM\obj\Debug\SOM.Properties.Resources.resources
+C:\Users\kingn\RiderProjects\SOM\SOM\obj\Debug\SOM.csproj.GenerateResource.cache
+C:\Users\kingn\RiderProjects\SOM\SOM\obj\Debug\SOM.csproj.CoreCompileInputs.cache
+C:\Users\kingn\RiderProjects\SOM\SOM\obj\Debug\SOM.exe
+C:\Users\kingn\RiderProjects\SOM\SOM\obj\Debug\SOM.pdb
+C:\Users\kingn\RiderProjects\SOM\SOM\obj\Debug\SOM.Form1.resources
