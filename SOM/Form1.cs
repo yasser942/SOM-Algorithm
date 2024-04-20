@@ -20,15 +20,6 @@ namespace SOM
         public Form1()
         {
             InitializeComponent();
-            
-            
-            
-          
-            
-
-
-            
-
         }
         void InsertButtonsIntoGrid()
         {
@@ -62,25 +53,20 @@ namespace SOM
                     // Center align the button label
                     buttonCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
+
                     // Assign button cell to the cell in the grid
                     dataGridView1[col, row] = buttonCell;
                 }
             }
         }
+        
 
         private void RunSOM()
         {
             StreamReader sr = new StreamReader(selectedFileName);
             int lng = sr.ReadLine().Split(',').Length;
              map = new Map(lng - 1, 3, selectedFileName);
-            
-           
-
-            
-            
             InsertButtonsIntoGrid();
-            
-
         }
        
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -162,7 +148,6 @@ namespace SOM
             NormalisePatterns();
             Train(0.0000001);
             DumpCoordinates();
-            
 
             double sse = 0;
             for (int i = 0; i < outputs.GetLength(0); i++)
@@ -196,6 +181,7 @@ namespace SOM
 
         private void LoadData(string file)
         {
+            
             StreamReader reader = File.OpenText(file);
             reader.ReadLine(); // Ignore first line.
             while (!reader.EndOfStream)
@@ -309,21 +295,20 @@ namespace SOM
         {
             List<string> clusteredItems = new List<string>();
 
-            // Iterate over neurons in the same row as the clicked neuron
-            for (int j = 0; j < length; j++)
+            foreach (Neuron neuron in outputs)
             {
-                if (outputs[xCoord, j].Y == yCoord) // Check if same Y coordinate
+                if (neuron.X == xCoord && neuron.Y == yCoord)
                 {
-                    foreach (string item in outputs[xCoord, j].tr)
+                    foreach (string item in neuron.tr)
                     {
-                        clusteredItems.Add(item);
+                       clusteredItems.Add(item);
                     }
+                    break;
                 }
             }
 
             return clusteredItems;
         }
-
     }
 
     public class Neuron
